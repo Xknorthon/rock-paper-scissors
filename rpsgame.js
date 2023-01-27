@@ -3,15 +3,11 @@ function getComputerChoice() {
     const randomIndex = Math.floor(Math.random() * choices.length);
     return choices[randomIndex];
 }
-  
-
 
 function playRound(playerSelection, computerSelection) {
     
     computerSelection = getComputerChoice().toLowerCase();
     playerSelection = "rock";
-    console.log(computerSelection);
-    
     
     if (playerSelection === computerSelection) {
         return "It's a tie!";
@@ -20,10 +16,8 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection === "scissors" && computerSelection === "paper") ||
         (playerSelection === "paper" && computerSelection === "rock")
       ) {
-        return "You win! ";
+        return "You win! " + playerSelection + " beats" + computerSelection;
       } else {
-        return "You lose! ";
+        return "You lose! " + computerSelection + " beats" + playerSelection;
     }
 }
-   
-

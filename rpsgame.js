@@ -23,7 +23,7 @@ function playRound(playerSelection, computerSelection) {
         return "You win! ";
       } else {
         return "You lose! ";
-      }
     }
+}
    
-console.log(playRound("rock", "rock"));
+

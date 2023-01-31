@@ -4,10 +4,13 @@ function getComputerChoice() {
     return choices[randomIndex];
 }
 
+// const playerSelection = "rock";
+// const computerSelection = getComputerChoice().toLowerCase();
+
 function playRound(playerSelection, computerSelection) {
     
     computerSelection = getComputerChoice().toLowerCase();
-    playerSelection = "rock";
+    playerSelection = "rock".toLowerCase();
     
     if (playerSelection === computerSelection) {
         return "It's a tie!";
@@ -16,8 +19,14 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection === "scissors" && computerSelection === "paper") ||
         (playerSelection === "paper" && computerSelection === "rock")
       ) {
-        return "You win! " + playerSelection + " beats" + computerSelection;
+        return "You win! " + playerSelection + " beats " + computerSelection;
       } else {
-        return "You lose! " + computerSelection + " beats" + playerSelection;
+        return "You lose! " + computerSelection + " beats " + playerSelection;
     }
 }
+
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+console.log(playerSelection);
+console.log(computerSelection);
+console.log(playRound(playerSelection, computerSelection));
